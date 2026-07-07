@@ -125,33 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 2400);
   }
-  // ==========================================
-  // 1. Theme Switcher (Light / Dark Mode)
-  // ==========================================
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const htmlElement = document.documentElement;
-
-  // Retrieve theme preference from localStorage or check system preference
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-
-  // Apply initial theme
-  htmlElement.setAttribute('data-theme', initialTheme);
-
-  themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    showToast(
-      'Theme Updated',
-      `Switched to ${newTheme === 'light' ? 'Light' : 'Dark'} Mode`,
-      'success'
-    );
-  });
 
   // ==========================================
   // 2. Mobile Responsive Menu Toggle
