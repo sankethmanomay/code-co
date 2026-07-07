@@ -505,9 +505,20 @@ body[data-theme="dark"] .navbar-container {
 }
 
 .card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 24px;
-  display: inline-block;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon-svg {
+  width: 48px;
+  height: 48px;
+  stroke: var(--accent-primary);
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
+}
+
+.about-card:hover .card-icon-svg {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .card-title {
