@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CODE & CO - Turning Ideas Into Code. A build-first, project-driven coding club focused on shipping real projects, hackathons, and open source.">
+  <title>CODE & CO | Turning Ideas Into Code</title>
+  <!-- Google Fonts: Space Grotesk (Tech Headings) and JetBrains Mono (Tech Accent/Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="navbar-container">
+    <div class="navbar-wrapper">
+      <a href="#hero" class="nav-logo">
+        <svg viewBox="0 0 75 80" class="logo-small-svg" shape-rendering="crispEdges">
+          <use href="#logo-path"></use>
+        </svg>
+        <span class="logo-text">CODE <span style="color: var(--accent-primary);">&</span> CO</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#enroll" class="nav-link">Enroll</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle dark/light theme" class="theme-toggle-btn">
+          <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+          <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SVG Sprite Definition for Logo (Used across the site) -->
+  <svg style="display: none;">
+    <g id="logo-path">
+      <!-- Green Pixels -->
+      <g fill="var(--accent-primary)">
+        <!-- Row 0 -->
+        <rect x="30" y="0" width="4" height="4" />
+        <rect x="35" y="0" width="4" height="4" />
+        <!-- Row 1 -->
+        <rect x="20" y="5" width="4" height="4" />
+        <rect x="25" y="5" width="4" height="4" />
+        <rect x="30" y="5" width="4" height="4" />
+        <rect x="35" y="5" width="4" height="4" />
+        <!-- Row 2 -->
+        <rect x="15" y="10" width="4" height="4" />
+        <rect x="20" y="10" width="4" height="4" />
+        <rect x="25" y="10" width="4" height="4" />
+        <!-- Row 3 -->
+        <rect x="15" y="15" width="4" height="4" />
+        <rect x="20" y="15" width="4" height="4" />
+        <rect x="25" y="15" width="4" height="4" />
+        <!-- Row 4 -->
+        <rect x="10" y="20" width="4" height="4" />
+        <rect x="15" y="20" width="4" height="4" />
+        <rect x="20" y="20" width="4" height="4" />
+        <!-- Row 5 -->
+        <rect x="5" y="25" width="4" height="4" />
+        <rect x="10" y="25" width="4" height="4" />
+        <rect x="15" y="25" width="4" height="4" />
+        <!-- Row 6 -->
+        <rect x="0" y="30" width="4" height="4" />
+        <rect x="10" y="30" width="4" height="4" />
+        <rect x="15" y="30" width="4" height="4" />
+        <!-- Row 7 -->
+        <rect x="5" y="35" width="4" height="4" />
+        <rect x="10" y="35" width="4" height="4" />
+        <rect x="15" y="35" width="4" height="4" />
+        <!-- Row 8 -->
+        <rect x="5" y="40" width="4" height="4" />
+        <rect x="10" y="40" width="4" height="4" />
+        <rect x="15" y="40" width="4" height="4" />
+        <!-- Row 9 -->
+        <rect x="0" y="45" width="4" height="4" />
+        <rect x="10" y="45" width="4" height="4" />
+        <rect x="15" y="45" width="4" height="4" />
+        <!-- Row 10 -->
+        <rect x="5" y="50" width="4" height="4" />
+        <rect x="10" y="50" width="4" height="4" />
+        <rect x="15" y="50" width="4" height="4" />
+        <!-- Row 11 -->
+        <rect x="10" y="55" width="4" height="4" />
+        <rect x="15" y="55" width="4" height="4" />
+        <rect x="20" y="55" width="4" height="4" />
+        <!-- Row 12 -->
+        <rect x="0" y="60" width="4" height="4" />
+        <rect x="15" y="60" width="4" height="4" />
+        <rect x="20" y="60" width="4" height="4" />
+        <!-- Row 13 -->
+        <rect x="15" y="65" width="4" height="4" />
+        <rect x="20" y="65" width="4" height="4" />
+        <rect x="25" y="65" width="4" height="4" />
+        <!-- Row 14 -->
+        <rect x="20" y="70" width="4" height="4" />
+        <rect x="25" y="70" width="4" height="4" />
+        <rect x="30" y="70" width="4" height="4" />
+        <rect x="35" y="70" width="4" height="4" />
+        <!-- Row 15 -->
+        <rect x="30" y="75" width="4" height="4" />
+        <rect x="35" y="75" width="4" height="4" />
+      </g>
+      <!-- Charcoal/Theme Inverted Pixels -->
+      <g fill="var(--text-primary)">
+        <!-- Row 0 -->
+        <rect x="40" y="0" width="4" height="4" />
+        <rect x="50" y="0" width="4" height="4" class="glitch-pixel glitch-p1" />
+        <!-- Row 1 -->
+        <rect x="40" y="5" width="4" height="4" />
+        <rect x="45" y="5" width="4" height="4" />
+        <rect x="55" y="5" width="4" height="4" class="glitch-pixel glitch-p2" />
+        <rect x="60" y="5" width="4" height="4" />
+        <rect x="65" y="5" width="4" height="4" class="glitch-pixel glitch-p3" />
+        <!-- Row 2 -->
+        <rect x="30" y="10" width="4" height="4" />
+        <rect x="35" y="10" width="4" height="4" />
+        <rect x="45" y="10" width="4" height="4" />
+        <rect x="50" y="10" width="4" height="4" class="glitch-pixel glitch-p4" />
+        <rect x="60" y="10" width="4" height="4" />
+        <rect x="65" y="10" width="4" height="4" class="glitch-pixel glitch-p5" />
+        <rect x="70" y="10" width="4" height="4" class="glitch-pixel glitch-p6" />
+        <!-- Row 3 -->
+        <rect x="30" y="15" width="4" height="4" />
+        <!-- Row 4 -->
+        <rect x="25" y="20" width="4" height="4" />
+        <!-- Row 5 -->
+        <rect x="20" y="25" width="4" height="4" />
+        <!-- Row 6 -->
+        <rect x="20" y="30" width="4" height="4" />
+        <!-- Row 7 -->
+        <rect x="20" y="35" width="4" height="4" />
+        <!-- Row 8 -->
+        <rect x="20" y="40" width="4" height="4" />
+        <!-- Row 9 -->
+        <rect x="20" y="45" width="4" height="4" />
+        <!-- Row 10 -->
+        <rect x="20" y="50" width="4" height="4" />
+        <!-- Row 11 -->
+        <rect x="25" y="55" width="4" height="4" />
+        <!-- Row 12 -->
+        <rect x="25" y="60" width="4" height="4" />
+        <!-- Row 13 -->
+        <rect x="30" y="65" width="4" height="4" />
+        <rect x="35" y="65" width="4" height="4" />
+        <rect x="50" y="65" width="4" height="4" class="glitch-pixel glitch-p1" />
+        <rect x="60" y="65" width="4" height="4" />
+        <rect x="65" y="65" width="4" height="4" class="glitch-pixel glitch-p2" />
+        <rect x="70" y="65" width="4" height="4" class="glitch-pixel glitch-p3" />
+        <!-- Row 14 -->
+        <rect x="40" y="70" width="4" height="4" />
+        <rect x="45" y="70" width="4" height="4" />
+        <rect x="55" y="70" width="4" height="4" class="glitch-pixel glitch-p4" />
+        <rect x="60" y="70" width="4" height="4" />
+        <rect x="65" y="70" width="4" height="4" class="glitch-pixel glitch-p5" />
+        <!-- Row 15 -->
+        <rect x="40" y="75" width="4" height="4" />
+        <rect x="50" y="75" width="4" height="4" class="glitch-pixel glitch-p6" />
+      </g>
+    </g>
+  </svg>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="tagline-wrapper">
+            <span class="tagline-divider"></span>
+            <span class="tagline-text">Turning Ideas Into Code</span>
+            <span class="tagline-divider"></span>
+          </div>
+          <h1 class="hero-title">CODE & CO</h1>
+          <p class="hero-desc">
+            A build-first, project-driven coding club where students learn by shipping real software. 
+            We bypass dry theory to focus on team collaborations, hackathons, open source contributions, and peer-led product cycles.
+          </p>
+          <div class="cta-group">
+            <a href="#enroll" class="btn btn-primary">Join the Club</a>
+            <a href="#about" class="btn btn-secondary">How We Work</a>
+          </div>
+        </div>
+        <div class="hero-logo-box">
+          <div class="logo-wrapper">
+            <svg viewBox="0 0 75 80" class="logo-large-svg" shape-rendering="crispEdges">
+              <use href="#logo-path"></use>
+            </svg>
+            <div class="logo-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION ("How We Work") -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How We Work</h2>
+          <p class="section-subtitle">We grow by building products that people use.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Cohort-Based Cycles</h3>
+            <p class="card-desc">Commit to 6-week product cycles. Form teams, brainstorm, scope features, and design real-world apps with clear ship dates.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🚀</div>
+            <h3 class="card-title">Weekly Sprints</h3>
+            <p class="card-desc">Stay accountable with check-ins, resolve blockers together, and participate in weekend hacking sessions.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">🤝</div>
+            <h3 class="card-title">Senior Mentorship</h3>
+            <p class="card-desc">Gain code reviews, architecture feedback, and career guidance from experienced seniors and alumni.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENROLLMENT SECTION -->
+    <section id="enroll" class="section enroll-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Join CODE & CO</h2>
+          <p class="section-subtitle">Take your ideas from drafts to production. Start your journey here.</p>
+        </div>
+        <div class="enroll-wrapper">
+          <div class="enroll-card">
+            <h3 class="enroll-card-title">Enrollment Form</h3>
+            <form id="enrollment-form" class="enroll-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required placeholder="e.g. Alex Mercer">
+                  <span class="error-msg">Please enter your full name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="usn">USN / Roll Number</label>
+                  <input type="text" id="usn" name="usn" required placeholder="e.g. 1RV22CS001">
+                  <span class="error-msg">Please enter a valid USN.</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="branch">Branch</label>
+                  <input type="text" id="branch" name="branch" required placeholder="e.g. Computer Science">
+                  <span class="error-msg">Please specify your branch.</span>
+                </div>
+                <div class="form-group">
+                  <label for="section">Section</label>
+                  <input type="text" id="section" name="section" required placeholder="e.g. 4A or B">
+                  <span class="error-msg">Please enter your section.</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="skills">Skills you have, if any</label>
+                <textarea id="skills" name="skills" rows="4" placeholder="e.g. HTML/CSS, JavaScript, Python, UI Design, Git (leave blank if beginner)"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-text">Submit Enrollment</span>
+                <span class="spinner"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Have questions about cohorts, stack recommendations, or sponsorships?</p>
+        </div>
+        <div class="contact-grid">
+          <!-- Contact Details Cards -->
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <h3 class="contact-card-title">Email</h3>
+            <p class="contact-card-value"><a href="mailto:contact@codeandco.club">contact@codeandco.club</a></p>
+            <span class="contact-card-hint">Response in 24 hours</span>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">💬</div>
+            <h3 class="contact-card-title">WhatsApp / Call</h3>
+            <p class="contact-card-value"><a href="tel:+15550199234">+1 (555) 019-9234</a></p>
+            <span class="contact-card-hint">Mon to Fri, 10 AM - 6 PM</span>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📸</div>
+            <h3 class="contact-card-title">Instagram</h3>
+            <p class="contact-card-value"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@codeandco.club</a></p>
+            <span class="contact-card-hint">Follow for build updates</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 75 80" class="logo-small-svg" shape-rendering="crispEdges">
+            <use href="#logo-path"></use>
+          </svg>
+          <span class="logo-text">CODE <span style="color: var(--accent-primary);">&</span> CO</span>
+        </div>
+        <p class="footer-tagline">Turning Ideas Into Code.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#enroll">Enroll</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CODE & CO Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
