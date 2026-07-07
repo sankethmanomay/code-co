@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lucide vector outline icons
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
   // ==========================================
   // 0. Loading Screen Animation Sequence
   // ==========================================

@@ -120,7 +120,6 @@ app.post('/api/enroll', async (req, res) => {
     });
   }
 });
-
 // Catch-all to serve index.html for other routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));

@@ -11,6 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
   <!-- Inline script to prevent layout flashes on repeat visits -->
@@ -407,6 +412,76 @@
       </div>
     </section>
 
+    <!-- ACTIVITIES SECTION ("What We'll Do") -->
+    <section id="activities" class="section activities-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What We'll Do</h2>
+          <p class="section-subtitle">CODE & CO isn't a lecture club — it's a build club. Here's what you'll actually be doing.</p>
+        </div>
+        <div class="activities-grid">
+          <!-- Card 1 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="code" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Weekly Build Sprints</h3>
+            <p class="activity-desc">Small teams pick a real problem and ship a working project in a fixed cycle, every week.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="trophy" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Hackathons & SIH Prep</h3>
+            <p class="activity-desc">Team up for internal hackathons and get mentored for events like Smart India Hackathon.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="git-pull-request" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Open Source Contributions</h3>
+            <p class="activity-desc">Guided sessions on finding, contributing to, and getting PRs merged into real open source projects.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="presentation" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Peer-Led Workshops</h3>
+            <p class="activity-desc">Members teach members — FastAPI, web dev, AI/ML, cybersecurity basics, whatever the club is building with.</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="monitor" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Project Showcases</h3>
+            <p class="activity-desc">End-of-cycle demo days where teams present what they shipped to the whole club.</p>
+          </div>
+          <!-- Card 6 -->
+          <div class="activity-card">
+            <div class="activity-corner-accent"></div>
+            <div class="activity-icon-badge">
+              <i data-lucide="help-circle" class="activity-icon"></i>
+            </div>
+            <h3 class="activity-title">Doubt-Wall / Support</h3>
+            <p class="activity-desc">An always-open space where members post problems/doubts and get help from peers.</p>
+          </div>
+        </div>
+        <div class="activities-cta-container">
+          <p class="activities-cta-text">Ready to be part of it?</p>
+          <a href="#enroll" class="btn btn-primary">Join the Club</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ENROLLMENT SECTION -->
     <section id="enroll" class="section enroll-section">
       <div class="container">
@@ -511,6 +586,7 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- JavaScript -->
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="app.js"></script>
 </body>
 </html>
