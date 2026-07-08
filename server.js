@@ -290,7 +290,7 @@ app.post('/api/enroll', async (req, res) => {
         console.log('Successfully saved to Google Sheets via Apps Script!');
         return res.status(200).json({
           success: true,
-          message: 'Successfully enrolled! Details saved to Google Sheets.',
+          message: 'Registration successful',
           source: 'google_sheets'
         });
       } else {
@@ -305,7 +305,7 @@ app.post('/api/enroll', async (req, res) => {
       
       return res.status(200).json({
         success: true,
-        message: 'Enrolled successfully! (Saved to local database due to Sheets integration error)',
+        message: 'Registration successful',
         source: 'local_file_fallback',
         warning: error.message
       });
@@ -318,7 +318,7 @@ app.post('/api/enroll', async (req, res) => {
     
     return res.status(200).json({
       success: true,
-      message: 'Enrolled successfully! (Saved to local database. Configure APPS_SCRIPT_URL in .env for Google Sheets integration)',
+      message: 'Registration successful',
       source: 'local_file'
     });
   }
