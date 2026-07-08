@@ -239,7 +239,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Validate inputs
     inputs.forEach(input => {
+      let isInputValid = true;
       if (input.value.trim() === '') {
+        isInputValid = false;
+      } else if (input.type === 'email') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(input.value.trim())) {
+          isInputValid = false;
+        }
+      }
+
+      if (!isInputValid) {
         input.parentElement.classList.add('invalid');
         isFormValid = false;
       } else {
@@ -252,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.skills = document.getElementById('skills').value.trim();
 
     if (!isFormValid) {
-      showToast('Validation Error', 'Please fill in all required fields.', 'error');
+      showToast('Validation Error', 'Please check the form for errors and try again.', 'error');
       return;
     }
 
